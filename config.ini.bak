@@ -1,0 +1,37 @@
+[MODEL]
+NUM_CLASSES = 5
+OUTPUT_DIR = "./checkpoints"
+MODEL_NAME = "MViTv2_T_in1k_skin.pyth"
+; MODEL_NAME = "MViTv2_T_in1k_eye.pyth"
+
+[DATA]
+DATA_TYPE = "skin"
+PATH_TO_DATA_DIR = "./mvit/DATA/01_lesions_new_test"
+; DATA_TYPE = "eye"
+; PATH_TO_DATA_DIR = "./mvit/DATA/02_eyes_new_test"
+
+[TRAIN]
+BATCH_SIZE = 65
+
+[TEST]
+BATCH_SIZE = 65
+
+[SOLVER]
+MAX_EPOCH = 30
+
+[FREEZE]
+BLOCKS_FROZEN = 5
+
+[WARMUP]
+WARMUP_EPOCHS = 0
+
+[CHECKPOINT]
+RESET_CHECKPOINT = 0
+
+
+[DATA_AUG]
+COLOR_JITTER = 0.4
+RAND_AUG = None
+ERASE = 0.25
+NUM_COUNT = 1
+MIXUP = False

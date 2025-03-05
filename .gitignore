@@ -1,0 +1,17 @@
+# excluding images, model file and backup folder
+mvit/archive/
+mvit/*.pyth
+tmp/
+backup/
+*.pickle
+# excluding auto-generated files when running the script
+__pycache__
+mvit/build/lib/
+*.egg-info
+*.pyc
+# excluding DATA folder according to new convention
+mvit/DATA/
+checkpoints/
+logs/
+config.ini
+README_old.md
